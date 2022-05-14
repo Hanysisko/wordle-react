@@ -4,7 +4,6 @@ body {
   font-family: verdana;
   margin: 0;
 }
-
 h1 {
   font-size: 1.2em;
   padding: 20px 0;
@@ -33,18 +32,91 @@ h1 {
 }
 
 /* letters */
-
 .row div.grey {
-  background: grey;
-  border-color: grey;
+  --background: grey;
+  --border-color: grey;
+  animation: flip 0.5s ease forwards;
 }
-
 .row div.green {
-  background: darkgreen;
-  border-color: darkgreen;
+  --background: green;
+  --border-color: green;
+  animation: flip 0.5s ease forwards;
+}
+.row div.yellow {
+  --background: darkgoldenrod;
+  --border-color: darkgoldenrod;
+  animation: flip 0.5s ease forwards;
 }
 
-.row div.yellow {
-  background: darkgoldenrod;
-  border-color: darkgoldenrod;
+.row > div:nth-child(2) {
+  animation-delay:0.2s
+}
+.row > div:nth-child(3) {
+  animation-delay:0.4s
+}
+.row > div:nth-child(4) {
+  animation-delay:0.6s
+}
+.row > div:nth-child(5) {
+  animation-delay:0.8s
+}
+
+.row.current > div.filled {
+  animation: bounce 0.1s ease-in-out forwards;
+}
+
+/* keypad */
+.keypad {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.keypad > div {
+  margin: 5px;
+  width: 40px;
+  height: 50px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 50px;
+}
+
+
+/* animations */
+@keyframes flip {
+  0%{
+    transform: rotateX(0);
+    background: #fff;
+    border-color: #333;
+  }
+  45%{
+    transform: rotateX(90deg);
+    background: #fff;
+    border-color: #333;
+  }
+  55%{
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+  100%{
+    transform: rotateX(0);
+    background: var(--background);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+}
+
+@keyframes bounce {
+  0%{
+    transform: scale(1);
+    border-color: #ddd;
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+    border-color: #333;
+  }
 }

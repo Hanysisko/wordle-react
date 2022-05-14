@@ -32,7 +32,7 @@ export default function Row({ currentGuess, guess }) {
         ))}
         {/* this one is for "dummy" boxes, at the end of currentGuess */}
         {[...Array(5 - letters.length)].map((_, index) => (
-          <div key={index} className='filled'></div>         
+          <div key={index} className=''></div>         
         ))}
       </div>
     )
