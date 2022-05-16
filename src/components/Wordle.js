@@ -32,7 +32,7 @@ export default function Wordle({ solution }) {
   return (
     <div>
       
-      <div>Wordle solution is {solution} and current guess is |{currentGuess}|</div>
+      {/* <div>Wordle solution is {solution} and current guess is |{currentGuess}|</div> */}
       
       <Grid 
         currentGuess={currentGuess}

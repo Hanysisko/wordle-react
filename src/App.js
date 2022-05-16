@@ -5,10 +5,10 @@ function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/solutions')
+    fetch('db.json')
       .then(res => res.json())
       .then(json => {
-        const randomSolution = json[Math.floor((Math.random() * json.length))];
+        const randomSolution = json.solutions[Math.floor((Math.random() * json.solutions.length))];
         // console.log(randomSolution);
         setSolution(randomSolution.word);
       })
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Wordle (Lingo)</h1>
+      <h1>Łordle</h1>
 
       { solution && <Wordle solution={solution}/> }
 
