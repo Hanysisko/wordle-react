@@ -5,7 +5,7 @@ export default function Grid({ currentGuess, guesses, turn }) {
   
   
   return(
-    <div>
+    <div className="grid">
       {guesses.map((guess, index) => {
         
         if(turn === index){

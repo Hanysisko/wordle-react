@@ -5,11 +5,17 @@ function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch('db.json')
+    fetch('db.json', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+
+    })
       .then(res => res.json())
       .then(json => {
         const randomSolution = json.solutions[Math.floor((Math.random() * json.solutions.length))];
-        // console.log(randomSolution);
+        // console.log(json);
         setSolution(randomSolution.word);
       })
   }, [setSolution]);

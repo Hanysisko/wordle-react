@@ -9,18 +9,18 @@ export default function Wordle({ solution }) {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('keyup', handleKeyup);
+    window.addEventListener('keydown', handleKeyup);
     
     if (isCorrect){
       setTimeout(() => setShowModal(true),2000);
-      window.removeEventListener('keyup', handleKeyup);
+      window.removeEventListener('keydown', handleKeyup);
     };
     if (turn > 5){
       setTimeout(() => setShowModal(true),2000);
-      window.removeEventListener('keyup', handleKeyup);
+      window.removeEventListener('keydown', handleKeyup);
     }
 
-    return () => window.removeEventListener('keyup', handleKeyup);
+    return () => window.removeEventListener('keydown', handleKeyup);
   },[handleKeyup, isCorrect]);
 
 

@@ -99,6 +99,8 @@ const useWordle = (solution) => {
   //keyupevent & track current guess
   //when enter pressed, add new guess
   const handleKeyup = ({ key }) => {
+
+    console.log(key);
     
     if (key === 'Enter') {
       
@@ -133,7 +135,7 @@ const useWordle = (solution) => {
       return
     };
 
-    if (/^[A-Za-z]$/.test(key)) {
+    if (/^[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]$/.test(key)) {
       if (currentGuess.length < 5) {
         setCurrentGuess((prev) => {
           return prev + key
