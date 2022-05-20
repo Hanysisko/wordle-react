@@ -42,6 +42,8 @@ export default function Wordle({ solution }) {
 
       <Keypad 
         usedKeys={usedKeys}
+        solution={solution}
+        handleKeyup={handleKeyup}
       />
 
       {showModal 

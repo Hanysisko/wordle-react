@@ -88,6 +88,7 @@ h1 {
   display: inline-block;
   border-radius: 6px;
   line-height: 50px;
+  user-select: none;
 }
 .keypad > div.break {
   display: none;

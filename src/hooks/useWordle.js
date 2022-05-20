@@ -100,7 +100,7 @@ const useWordle = (solution) => {
   //when enter pressed, add new guess
   const handleKeyup = ({ key }) => {
 
-    console.log(key);
+    // console.log(key);
     
     if (key === 'Enter') {
       
@@ -125,7 +125,6 @@ const useWordle = (solution) => {
       const formatted = formatGuess();
 
       addNewGuess(formatted);
-
     };
 
     if (key === 'Backspace') {
@@ -142,6 +141,8 @@ const useWordle = (solution) => {
         })
       }
     };
+
+    // console.log(currentGuess,currentGuess.length,typeof currentGuess)
 
   };
 
