@@ -10,7 +10,7 @@
     {"key": "i"},
     {"key": "o"},
     {"key": "p"},
-    {"key": "leftbreak", "otherButton": "break"},
+    {"key": "leftbreakup", "otherButton": "break"},
     {"key": "a"},
     {"key": "s"},
     {"key": "d"},
@@ -20,7 +20,7 @@
     {"key": "j"},
     {"key": "k"},
     {"key": "l"},
-    {"key": "rightbreak", "otherButton": "break"},
+    {"key": "rightbreakup", "otherButton": "break"},
     {"key": "Enter", "sign": "↳", "otherButton": "other"},
     {"key": "z"},
     {"key": "x"},
@@ -30,6 +30,7 @@
     {"key": "n"},
     {"key": "m"},
     {"key": "Backspace", "sign": "⌫", "otherButton": "other"},
+    {"key": "leftbreakdown", "otherButton": "break"},
     {"key": "ą"},
     {"key": "ć"},
     {"key": "ę"},
@@ -38,7 +39,8 @@
     {"key": "ó"},
     {"key": "ś"},
     {"key": "ź"},
-    {"key": "ż"}
+    {"key": "ż"},
+    {"key": "rightbreakdown", "otherButton": "break"}
   ],
   "solutions": [
     {"id": 1, "word": "butla"},
