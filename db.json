@@ -29,7 +29,18 @@
     {"key": "b"},
     {"key": "n"},
     {"key": "m"},
-    {"key": "Backspace", "sign": "⌫", "otherButton": "other"}
+    {"key": "Backspace", "sign": "⌫", "otherButton": "other"},
+    {"key": "leftbreakdown", "otherButton": "break"},
+    {"key": "ą"},
+    {"key": "ć"},
+    {"key": "ę"},
+    {"key": "ł"},
+    {"key": "ń"},
+    {"key": "ó"},
+    {"key": "ś"},
+    {"key": "ź"},
+    {"key": "ż"},
+    {"key": "rightbreakdown", "otherButton": "break"}
   ],
   "solutions": [
     {"id": 1, "word": "butla"},
