@@ -14,7 +14,7 @@ const useWordle = (solution) => {
   //for example: [{key: 'd', color: 'yellow'}]
   const formatGuess = () => {
     
-    console.log('formatting the current guess -', currentGuess);
+    // console.log('formatting the current guess -', currentGuess);
 
     let solutionArray = [...solution]
     let formattedGuess = [...currentGuess].map((letter) => {

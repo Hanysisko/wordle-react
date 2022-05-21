@@ -1,49 +1,50 @@
 body {
-  height: 100vh;
+  /* min-height: 100vh; */
+  font-family: 'Azeret Mono', monospace;
+  min-height: -webkit-fill-available;
   text-align: center;
   font-size: 1em;
-  font-family: verdana;
   margin: 0;
 
 }
 h1 {
-  max-height: 10vh;
+  max-height: 5vh;
   font-size: 1.2em;
-  padding: 20px 0;
+  padding: 1vh 0;
   border-bottom: 1px solid #eee;
-  margin: 0 0 2% 0;
+  margin: 0 0 1% 0;
   color: #333;
 }
 
 .grid {
-  max-height: 420px;
+  max-width: 500px;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }
 
 /* rows */
 .row {
-  height: 20%;
   max-height: 70px;
-  text-align: center;
+  margin: 0 15px;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
 }
 .row > div {
   aspect-ratio: 1 / 1 ;
-  min-width: 30px;
-  min-height: 30px;
-  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   max-width: 60px;
   max-height: 60px;
   border: 1px solid #bbb;
   margin: 4px;
   text-align: center;
-  line-height: 60px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 250%;
+  font-size: 2rem;
   flex-grow: 1;
 }
 
@@ -77,14 +78,14 @@ h1 {
   animation-delay:0.8s
 }
 
-.row.current > div.filled {
+.row > div.filled {
   animation: bounce 0.1s ease-in-out forwards;
 }
 
 /* keypad */
 .keypad {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0.5em auto;
   font-weight: 700;
   font-size: 0.8em;
   text-transform: uppercase;
@@ -191,7 +192,7 @@ h1 {
     border-color: #ddd;
   }
   50%{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100%{
     transform: scale(1);
