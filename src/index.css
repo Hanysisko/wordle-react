@@ -27,14 +27,14 @@ h1 {
 .row {
   max-height: 70px;
   margin: 0 15px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 .row > div {
   aspect-ratio: 1 / 1 ;
   min-width: 20px;
   min-height: 20px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   max-width: 60px;
@@ -46,6 +46,12 @@ h1 {
   font-weight: bold;
   font-size: 2rem;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 400px) {
+  .row > div {
+    font-size: 8vw;
+  }
 }
 
 /* letters */
